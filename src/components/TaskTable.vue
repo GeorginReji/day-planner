@@ -1,25 +1,21 @@
 <template>
-  <v-data-table-virtual :headers="headers" :items="tasks" item-value="name" width="500"
+  <v-data-table-virtual :headers="headers" :items="taskStore.allTasks" item-value="name" width="500"
     show-select></v-data-table-virtual>
 </template>
 
 <script setup>
-import { watch, ref, defineProps } from 'vue';
+import { useTaskStore } from '@/store/TaskStore'
 
-const { allTask } = defineProps(['allTask']);
+const taskStore = useTaskStore()
 
 const headers = [
-  { title: 'Task Title', align: 'start', key: 'title' },
-  { title: 'Description', align: 'end', key: 'description' },
-  { title: 'Date', align: 'end', key: 'date' },
-  { title: 'Status', align: 'end', key: 'isCompleted' },
+  { title: 'Task Title', align: 'space-around', key: 'title' },
+  { title: 'Description', align: 'space-around', key: 'description' },
+  { title: 'Date', align: 'space-around', key: 'date' },
+  { title: 'Priority', align: 'space-around', key: 'priority' },
+  { title: 'Status', align: 'space-around', key: 'isCompleted' },
 ];
 
-const tasks = ref([]);
-
-watch(() => allTask, (newVal) => {
-  tasks.value = newVal;
-});
 </script>
 
 

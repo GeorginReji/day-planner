@@ -4,6 +4,7 @@ import Home from '../pages/index.vue';
 import calendar from '../pages/calendar.vue'
 import tasks from '../pages/tasks.vue'
 import goals from '../pages/goals.vue'
+import AddTask from '../pages/addTasks.vue';
 
 const routes = [
   { 
@@ -21,6 +22,10 @@ const routes = [
   { 
     path: '/goals', 
     component: goals 
+  },
+  {
+    path: '/addTasks',
+    component: AddTask
   }
 ];
 

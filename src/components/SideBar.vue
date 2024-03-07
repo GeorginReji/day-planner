@@ -17,8 +17,11 @@
             <router-link to="/">
                 <v-list-item prepend-icon="mdi-home" title="Home" value="home"></v-list-item>
             </router-link>
+            <router-link to="/AddTasks">
+                <v-list-item prepend-icon="mdi-checkbox-marked-outline" title="Add Task" value="tasks"></v-list-item>
+            </router-link>
             <router-link to="/tasks">
-                <v-list-item prepend-icon="mdi-checkbox-marked-outline" title="Tasks" value="tasks"></v-list-item>
+                <v-list-item prepend-icon="mdi-format-list-bulleted" title="Tasks" value="allTask"></v-list-item>
             </router-link>
             <router-link to="/calendar">
                 <v-list-item prepend-icon="mdi-calendar" title="Calendar" value="events"></v-list-item>
